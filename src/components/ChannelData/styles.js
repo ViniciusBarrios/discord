@@ -19,7 +19,7 @@ export const Messages = styled.div`
   flex-direction: column;
 
   max-height: calc(100vh - 46px - 66px);
-  overflow: scroll;
+  overflow-y: scroll;
 
   ::-webkit-scrollbar {
     width: 4px;
@@ -45,7 +45,30 @@ export const Input = styled.input`
   width: 100%;
   height: 44px;
 
-  padding: 0 10px 0 57px; 
+  padding: 0 10px 0 57px;
+  border-radius: 7px;
+
+  color: var(--white);
+
+  background-color: var(--chat-input);
+
+  position: relative;
+
+  &::placeholder {
+    color: var(--gray);
+  }
+
+  ~ svg {
+    position: relative;
+    top: -50%;
+    left: 14px;
+    transition: 180ms ease-in-out
+  }
 `;
 
-export const InputIcon = styled(AlternateEmail)``;
+export const InputIcon = styled(AlternateEmail)`
+  width: 24px;
+  height: 24px;
+
+  color: var(--gray);
+`;
